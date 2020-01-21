@@ -14,9 +14,9 @@ public class UserCreation {
 		WebDriver driver;
 		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("http://192.168.100.248/EwQIMS_Inst2");
+		driver.get("http://192.168.100.47/EwQIMS_Inst1/");
 		driver.findElement(By.id("txtUsername")).sendKeys("administrator");
-		driver.findElement(By.id("txtPassword")).sendKeys("a1");
+		driver.findElement(By.id("txtPassword")).sendKeys("admin");
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("(//input[@type='button'])[2]")).click();
 
@@ -36,7 +36,7 @@ public class UserCreation {
 		//driver.close();
 		// Scheduler 
 
-		driver.findElement(By.id("txtcode")).sendKeys("OSS-86");
+		driver.findElement(By.id("txtcode")).sendKeys("OS-86");
 		driver.findElement(By.id("txtfirstname")).sendKeys("Mazhar");
 		driver.findElement(By.id("txtlastname")).sendKeys("Khan");
 		driver.findElement(By.id("txtbusinessmail")).sendKeys("APScheduler1@omnexqa.com");
@@ -56,7 +56,7 @@ public class UserCreation {
 		driver.findElement(By.id("txtfirstname")).sendKeys("Steve");
 		driver.findElement(By.id("txtlastname")).sendKeys("Smith");
 		driver.findElement(By.id("txtbusinessmail")).sendKeys("APLauditor1@omnexqa.com");
-		driver.findElement(By.id("txtusername")).sendKeys("a1");
+		driver.findElement(By.id("txtusername")).sendKeys("au1");
 		driver.findElement(By.id("txtpassword")).sendKeys("a1");
 		driver.findElement(By.id("txtconfirmpassword")).sendKeys("a1");
 		driver.findElement(By.id("Changelogin")).click();
@@ -70,7 +70,7 @@ public class UserCreation {
 		driver.findElement(By.id("txtfirstname")).sendKeys("Chad");
 		driver.findElement(By.id("txtlastname")).sendKeys("Kymal");
 		driver.findElement(By.id("txtbusinessmail")).sendKeys("APLauditor2@omnexqa.com");
-		driver.findElement(By.id("txtusername")).sendKeys("a2");
+		driver.findElement(By.id("txtusername")).sendKeys("au2");
 		driver.findElement(By.id("txtpassword")).sendKeys("a2");
 		driver.findElement(By.id("txtconfirmpassword")).sendKeys("a2");
 		driver.findElement(By.id("Changelogin")).click();
@@ -85,7 +85,7 @@ public class UserCreation {
 		driver.findElement(By.id("txtfirstname")).sendKeys("Brad");
 		driver.findElement(By.id("txtlastname")).sendKeys("Smith");
 		driver.findElement(By.id("txtbusinessmail")).sendKeys("APLauditor3@omnexqa.com");
-		driver.findElement(By.id("txtusername")).sendKeys("a3");
+		driver.findElement(By.id("txtusername")).sendKeys("au3");
 		driver.findElement(By.id("txtpassword")).sendKeys("a3");
 		driver.findElement(By.id("txtconfirmpassword")).sendKeys("a3");
 		driver.findElement(By.id("Changelogin")).click();
@@ -100,7 +100,7 @@ public class UserCreation {
 		driver.findElement(By.id("txtfirstname")).sendKeys("Bradly");
 		driver.findElement(By.id("txtlastname")).sendKeys("watson");
 		driver.findElement(By.id("txtbusinessmail")).sendKeys("APLauditor4@omnexqa.com");
-		driver.findElement(By.id("txtusername")).sendKeys("a4");
+		driver.findElement(By.id("txtusername")).sendKeys("au4");
 		driver.findElement(By.id("txtpassword")).sendKeys("a4");
 		driver.findElement(By.id("txtconfirmpassword")).sendKeys("a4");
 		driver.findElement(By.id("Changelogin")).click();
