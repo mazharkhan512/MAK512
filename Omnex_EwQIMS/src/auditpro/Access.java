@@ -15,7 +15,7 @@ public class Access {
 		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
 		driver = new ChromeDriver();
 
-		driver.get("http://192.168.100.248/EwQIMS_Inst2");
+		driver.get("http://192.168.100.47/EwQIMS_Inst1");
 
 		driver.findElement(By.id("txtUsername")).sendKeys("m1");
 		driver.findElement(By.id("txtPassword")).sendKeys("m1");
@@ -46,10 +46,19 @@ public class Access {
 
 
 		WebElement frames1 = driver.findElement(By.id("ifr-user"));
-		WebElement frames2 = driver.findElement(By.id("ifrabout"));
+		driver.switchTo().frame(frames1);
+		
+		driver.findElement(By.id("gs_Empcode")).sendKeys("86");
+		driver.findElement(By.id("gs_Empcode")).sendKeys(Keys.ENTER);
+		driver.findElement(By.id("chkType_Admin")).click();
+		System.out.println("ok user page is displaying and user added to the group");
+		Thread.sleep(8000);
+		
+		
+	//	WebElement frames2 = driver.findElement(By.id("ifrabout"));
 
-		driver.switchTo().frame(frames1).switchTo().frame(frames2);;
 
+		
 		driver.findElement(By.id("gs_Empcode")).sendKeys("86");
 		driver.findElement(By.id("gs_Empcode")).sendKeys(Keys.ENTER);
 		driver.findElement(By.id("chkType_Admin")).click();
@@ -62,7 +71,7 @@ public class Access {
 
 		driver.findElement(By.id("btn_SuGroupsGridViewControl_iladd")).click();
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("//input[@class='editable']")).sendKeys("Auditor");
+		driver.findElement(By.xpath("//input[@class='editable']")).sendKeys("Auditor1");
 		driver.findElement(By.id("btn_SuGroupsGridViewControl_ilsave")).click();
 		driver.findElement(By.xpath("//input[@type='button']")).click();
 		driver.findElement(By.xpath("//td[contains(text(),'Auditor')]//parent::tr//img[@title='Add Users']")).click();
@@ -74,7 +83,7 @@ public class Access {
 
 		driver.findElement(By.id("btn_SuGroupsGridViewControl_iladd")).click();
 		Thread.sleep(4000);
-		driver.findElement(By.xpath("//input[@class='editable']")).sendKeys("Auditee");
+		driver.findElement(By.xpath("//input[@class='editable']")).sendKeys("Auditee1");
 		driver.findElement(By.id("btn_SuGroupsGridViewControl_ilsave")).click();
 		driver.findElement(By.xpath("//input[@type='button']")).click();
 		driver.findElement(By.xpath("//td[contains(text(),'Auditee')]//parent::tr//img[@title='Add Users']")).click();
