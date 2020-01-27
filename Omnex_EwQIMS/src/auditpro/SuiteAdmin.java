@@ -18,13 +18,13 @@ public class SuiteAdmin {
 		
 		driver = new ChromeDriver();
 
-		driver.get("http://192.168.100.248/EwQIMS_Inst2");
+		driver.get("http://192.168.100.47:8080/Common/EwIMSNew/homepage/Index");
 
 		driver.manage().window().maximize();	
 
 		driver.findElement(By.id("txtUsername")).sendKeys("administrator");
 
-		driver.findElement(By.id("txtPassword")).sendKeys("a1");
+		driver.findElement(By.id("txtPassword")).sendKeys("admin");
 
 		driver.findElement(By.xpath("(//input[@type='button'])[2]")).sendKeys(Keys.ENTER);
 
@@ -53,12 +53,11 @@ public class SuiteAdmin {
 		WebElement frames1 = driver.findElement(By.id("ifrUsers"));
 
 		WebDriverWait wait = new WebDriverWait(driver,100);
+		
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frames1));
 
 		WebElement frames2 = driver.findElement(By.id("ifr-User"));
 		
-		
-
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frames2));
 
 		Thread.sleep(4000);

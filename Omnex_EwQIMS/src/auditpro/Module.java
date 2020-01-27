@@ -12,7 +12,7 @@ public class Module {
 		WebDriver driver;
 		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("http://192.168.100.248/EwQIMS_Inst2");
+		driver.get("http://192.168.100.47:8080/Common/EwIMSNew/homepage/Index");
 
 		driver.findElement(By.id("txtUsername")).sendKeys("administrator");
 		driver.findElement(By.id("txtPassword")).sendKeys("admin");

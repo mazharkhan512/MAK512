@@ -14,7 +14,7 @@ public class UserCreation {
 		WebDriver driver;
 		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("http://192.168.100.54/EwQIMS_Inst1");
+		driver.get("http://192.168.100.47/EwQIMS_Inst2");
 		driver.findElement(By.id("txtUsername")).sendKeys("administrator");
 		driver.findElement(By.id("txtPassword")).sendKeys("admin");
 		driver.manage().window().maximize();

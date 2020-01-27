@@ -26,5 +26,6 @@
 	<classpathentry kind="lib" path="D:/VVV/selenium-remote-driver-3.14.0.jar"/>
 	<classpathentry kind="lib" path="D:/VVV/selenium-safari-driver-3.14.0.jar"/>
 	<classpathentry kind="lib" path="D:/VVV/selenium-support-3.14.0.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

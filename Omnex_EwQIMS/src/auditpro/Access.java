@@ -15,7 +15,7 @@ public class Access {
 		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
 		driver = new ChromeDriver();
 
-		driver.get("http://192.168.100.47/EwQIMS_Inst1");
+		driver.get("http://192.168.100.47:8080/Common/EwIMSNew/homepage/Index");
 
 		driver.findElement(By.id("txtUsername")).sendKeys("m1");
 		driver.findElement(By.id("txtPassword")).sendKeys("m1");
@@ -45,66 +45,51 @@ public class Access {
 		Thread.sleep(8000);
 
 
-		WebElement frames1 = driver.findElement(By.id("ifr-user"));
+		WebElement frames1 = driver.findElement(By.id("ifrUsers"));
 		driver.switchTo().frame(frames1);
 		
-		driver.findElement(By.id("gs_Empcode")).sendKeys("86");
-		driver.findElement(By.id("gs_Empcode")).sendKeys(Keys.ENTER);
-		driver.findElement(By.id("chkType_Admin")).click();
-		System.out.println("ok user page is displaying and user added to the group");
-		Thread.sleep(8000);
+		WebElement frames2 = driver.findElement(By.id("ifr-user"));
+		driver.switchTo().frame(frames2);
 		
+		Thread.sleep(4000);
 		
-	//	WebElement frames2 = driver.findElement(By.id("ifrabout"));
-
-
 		
 		driver.findElement(By.id("gs_Empcode")).sendKeys("86");
 		driver.findElement(By.id("gs_Empcode")).sendKeys(Keys.ENTER);
+		driver.findElement(By.id("cb_userListingGridControl")).click();
+		Thread.sleep(4000);	
+		driver.switchTo(). parentFrame();	
 		driver.findElement(By.id("chkType_Admin")).click();
+		driver.findElement(By.id("save")).click();
 		System.out.println("ok user page is displaying and user added to the group");
 		Thread.sleep(8000);
 
 
-
-		//Auditor
-
-		driver.findElement(By.id("btn_SuGroupsGridViewControl_iladd")).click();
-		Thread.sleep(4000);
-		driver.findElement(By.xpath("//input[@class='editable']")).sendKeys("Auditor1");
-		driver.findElement(By.id("btn_SuGroupsGridViewControl_ilsave")).click();
-		driver.findElement(By.xpath("//input[@type='button']")).click();
-		driver.findElement(By.xpath("//td[contains(text(),'Auditor')]//parent::tr//img[@title='Add Users']")).click();
-		System.out.println("ok user page is displaying and user added to the group");
-		Thread.sleep(8000);
-
-
-		//Auditee
-
-		driver.findElement(By.id("btn_SuGroupsGridViewControl_iladd")).click();
-		Thread.sleep(4000);
-		driver.findElement(By.xpath("//input[@class='editable']")).sendKeys("Auditee1");
-		driver.findElement(By.id("btn_SuGroupsGridViewControl_ilsave")).click();
-		driver.findElement(By.xpath("//input[@type='button']")).click();
-		driver.findElement(By.xpath("//td[contains(text(),'Auditee')]//parent::tr//img[@title='Add Users']")).click();
-		System.out.println("ok user page is displaying and user added to the group");
-		Thread.sleep(8000);
-
-		//Approver
-
-		driver.findElement(By.id("btn_SuGroupsGridViewControl_iladd")).click();
-		Thread.sleep(4000);
-		driver.findElement(By.xpath("//input[@class='editable']")).sendKeys("Approver1");
-		driver.findElement(By.id("btn_SuGroupsGridViewControl_ilsave")).click();
-		driver.findElement(By.xpath("//input[@type='button']")).click();
-		driver.findElement(By.xpath("//td[contains(text(),'Approver1')]//parent::tr//img[@title='Add Users']")).click();
-		System.out.println("ok user page is displaying and user added to the group");
-		Thread.sleep(8000);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 
 		// xpath for user icon (//td[contains(text(),'Scheduler')])//parent::tr//img[@title='Add Users']
-
-
 
 		//driver.findElement(By.xpath("(//td[contains(text(),'Auditor')])//parent::tr//img[@title='Add Users']")).click();
 
